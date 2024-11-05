@@ -311,7 +311,7 @@ print(s1 & s2) # * Intersection
 
 print(s1  - s2) # * Difference
 
-print(s1  ^ s2) # * Sysmmetric Difference
+print(s1 ^ s2) # * Sysmmetric Difference
 
 for i in s1:
     print(i)
@@ -336,7 +336,7 @@ print(sorted(s2,reverse=True)) # ! Returns a LIST
 
 s = 'p e s'
 
-print(s.index('e'))
+print(s.index('e')) # * Returns the index of the first occurence of given string in s (this will return 2) 
 
 print(s.title()) # ! Uppercases all characters which are after space and first character
 
@@ -360,7 +360,7 @@ a = t.maketrans('S','p') # * This is replace function with extra steps
 
 print(a)
 
-print(t.translate(a))
+print(t.translate(a)) # * This is the final step for replacing
 
 print(b.partition('y'))
 
@@ -368,29 +368,65 @@ b = 'Hello My name'
 
 print(b.partition('n')) # * This returns a tuple
 
+# * Returns ('Hello My ', 'n', 'ame')
+
 print(b.split('n')) # * This returns a list
 
-print(b.encode(encoding='utf-8'))
+print(b.encode(encoding='utf-8')) # * Encodes the string in utf-8
 
 a = b.encode(encoding='utf-8')
 
-print(a.decode())
-'''
+print(a.decode()) # * Decodes the above encoded value
+
 # ! File Handling
 
-with open('biopic.txt') as f:
+with open('biopic.txt') as f: # ! default mode of open is r (read mode)
     print(f.read())
+
+# ! These Functions below work only in r,r+, w+ and a+
 
 # * read() returns all the things contained in the text file 
 
 # * readline() reads one line with \n included
 
 # * readlines() returns a list which contain each line as an element (with \n included at each line)
+'''
+with open('biopic.txt','w') as f: # ! w mode will create a new file if doesn't exist or overwrites(clears the file and starts from empty file)
+    
+    f.write('I am writing something new\n')
+
+    f.write('If I don\'t add \\n this will be printed continuesly')
+
+    f.write('Like so')
 
 import csv
 
-with open('t.csv','r') as d:
-    a = csv.reader(d)
-    print(a)
+with open('t.csv','r',newline='\r\n') as d: # ! newline='\r\n' removes any empty lines present in the csv file for a more presentable output
+
+    a = csv.reader(d) # * This produces a readable object (which means loop through it to get the values)
+
+    print(a) # * This prints the object representation
+
     for i in a:
+
+        print(i) # * This prints each value (row) in the csv file (except the empty rows as specified by newline='\r\n')
+
+with open('t.csv','a',newline='') as d: # ! We just don't add any empty lines when adding new data by using newline = ''
+
+    a=csv.writer(d) # * We created a writer object which will help us 
+
+    a.writerow([1,2,3])
+
+    a.writerow([10,11,12])
+    
+print('After Adding new things to the csv file:')
+
+with open('t.csv','r',newline='\r\n') as d: # ! look at line 404
+
+    a = csv.reader(d)
+
+    for i in a:
+
         print(i)
+
+#TODO learn about Dictreader and Dictwriter functions for csv
