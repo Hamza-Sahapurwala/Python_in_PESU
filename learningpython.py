@@ -389,7 +389,7 @@ with open('biopic.txt') as f: # ! default mode of open is r (read mode)
 # * readline() reads one line with \n included
 
 # * readlines() returns a list which contain each line as an element (with \n included at each line)
-'''
+
 with open('biopic.txt','w') as f: # ! w mode will create a new file if doesn't exist or overwrites(clears the file and starts from empty file)
     
     f.write('I am writing something new\n')
@@ -447,3 +447,54 @@ with open('t.csv','r',newline='\r\n') as d:
     for i in a:
 
         print(i)
+'''
+# ! Functions
+
+def areaofrectangle(a, b):
+
+    return a * b
+
+print('Area is:', areaofrectangle(5, 2))
+
+def areaoftriangle(a, b):
+
+    return 0.5 * a * b
+
+print('Area of Triangle is:', areaoftriangle(5, 2))
+
+def name(a):
+
+    return f'First Name is {a.split()[0]}\t and\t Last Name is {a.split()[-1]}'
+
+a = 'Hamza Shabbir Sahapurwala'
+
+print(f'The output is :',name(a))
+
+def d():
+
+    print('Hello') 
+
+d()
+
+print(d()) # * For functions which have no return statements ans they are still called, they return None
+
+d1 = d # * We are assigning function to another name
+
+d()
+
+del d # * We delete the old name
+
+d1() # * This only works with new function name
+
+def a(a,b,c):
+    return a,b,c
+
+print(a(1,2,3)) # * Returns a tuple
+
+'''
+There are 4 scenarios of Functions:
+With Argument, With return
+With Argument, Without return
+Without Argument, Without return
+Without Argument, With return
+'''
