@@ -144,7 +144,6 @@ print()
 
 for i in 'python':
     print(i)
-'
 
 a = 1
 
@@ -425,8 +424,26 @@ with open('t.csv','r',newline='\r\n') as d: # ! look at line 404
 
     a = csv.reader(d)
 
+    head = next(a) # * Skips the header row
+
     for i in a:
 
         print(i)
 
 #TODO learn about Dictreader and Dictwriter functions for csv
+
+with open('t.csv','a',newline='') as d:
+
+    a = {1:1,2:2,3:3}
+
+    b = csv.DictWriter(d)
+
+    b.writerow(a)
+
+with open('t.csv','r',newline='\r\n') as d:
+
+    a = csv.DictReader(d)
+
+    for i in a:
+
+        print(i)
