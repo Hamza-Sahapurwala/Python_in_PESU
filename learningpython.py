@@ -498,3 +498,29 @@ With Argument, Without return
 Without Argument, Without return
 Without Argument, With return
 '''
+
+# ! Positional and Keyword Arguments
+
+def b(c, n = 'Lol', a = 7): # * c is a positional argument while n and a are keyword arguments
+
+    print(f'The name is {n} and my age is {a} and I got to go to {c}.')
+
+b('Hhahaha',4) # * c = Hhahaha, n = 4 & a = 7(Cause a has default value)
+
+b('Noice',a = 3, n = 'Bwahahahah') # * c = 'Noice'
+
+b('Noice','AHAHAHHAHA',6) # * c = 'Noice', n = 'AHAHAHHAHA', a = 6
+
+b(n = 'Yolo', c = 'Noice') # * We can change the position of c if we treat it like a keyword argument
+
+# b(a = 7, n = 'SUI', 'Noice') # ! This won't work as for both in function header and in caller, the positional(non-default) argument/parameter is ALWAYS first
+
+# ! Positional Arguments can't be inbetween or after the keyword(default) arguments/parameters
+
+def aa(x,y):
+
+    print(x - y)
+
+x = 3; y = 4 # * ; acts as a separator so that x can have 3 as value and y has value 4
+
+aa(x,y)
