@@ -530,7 +530,7 @@ x = 3; y = 4 # * ; acts as a separator so that x can have 3 as value and y has v
 a = eval(input('List:'))
 
 print(type(a))
-'''
+
 def bbb(*args):
 
     # * args returns a tuple
@@ -608,3 +608,61 @@ def f1(a,b,*ar):
 f1(12,22,2,6)
 
 # * * and ** make is easier to take tuple and dictionary input
+'''
+# ! Recursion
+
+# * Calling a function while the function itself is running
+
+# * We can use the above property to solve problems
+
+# * To use the above thing, the criteria of writing a recursive functions:
+
+# * Base Case: The condition to stop recursion at this point
+
+# * Recursive Case: Anything which is not the base case but takes some step towards the base case
+
+# * Recursive Fucntions work like STACKS!!!
+
+# * Using Recursive functions to find factorial of a no.
+
+# * Depth: No. of steps to complete a problem
+
+'''
+Advantages:
+
+1. Used to simplify complex problems into smaller easier problems
+
+2. Solving problems with repeated patterns
+
+3. Handling unknown levels of depth
+
+4. Mathematical & Algorithmic
+'''
+
+def factorial(n):
+
+    if n == 0: # * Base Case
+
+        return 1
+    
+    else: # * Recursive Case
+
+        return n * factorial(n - 1) # * This calls the function again and again until the argument doesn't become 0 to reach the base case and
+    
+    # * from there the functins keep repeating their values to their callers coming to this place at last which gives us the answer
+
+print(factorial(5))
+
+# * Using Recursive Function, find GCD b/w two no.
+
+def gcd(a, b):
+
+    if b == 0:
+
+        return a
+    
+    else:
+
+        return gcd(b, a % b)
+    
+print(gcd(91,65))
