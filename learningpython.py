@@ -666,3 +666,19 @@ def gcd(a, b):
         return gcd(b, a % b)
     
 print(gcd(91,65))
+
+# * Using Recursive Function, print out the Fibonnaci Series
+
+def fibonnaci(n):
+
+    if n <= 1: # * Base Case
+
+        return n
+
+    else: # * Recursive Case
+
+        return fibonnaci(n - 1) + fibonnaci(n - 2) # * Because Fibonnaci Series is basically nth postion no. = (n-2)th position no. + (n-1)th position no.
+
+for i in range(0,6):
+
+    print(fibonnaci(i),end = ' ') # * At that index, it returns the fibonnaci no. present there
