@@ -682,3 +682,47 @@ def fibonnaci(n):
 for i in range(0,6):
 
     print(fibonnaci(i),end = ' ') # * At that index, it returns the fibonnaci no. present there
+
+print()
+
+# * Using Recursive Function, print out the the Movements for the game of Tower of Hanoi
+
+i = 0
+
+def toh(n, src, aux, des):
+
+    global i
+
+    if n == 1:
+
+        i+=1
+
+        print(f'Move Disk 1 from source {src} to destination {des}.')
+
+    else:
+
+        i+=1
+
+        toh(n - 1, src, des, aux)
+
+        print(f'Move Disk {n} from source {src} to destination {aux}.')
+
+        toh(n - 1, aux, src, des)
+
+toh(6,'A','B','C')
+
+print('The no. of moves it takes to solve the Tower of Hanoi',i)
+
+# * Using Recursive function to print a simple pattern
+
+def pattern(n):
+
+    if n == 0:
+
+        return
+    
+    print('*')
+
+    pattern(n-1)
+
+pattern(5)
