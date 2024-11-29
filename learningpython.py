@@ -717,7 +717,7 @@ print('The no. of moves it takes to solve the Tower of Hanoi',i)
 
 def pattern(n):
 
-    if n == 0:
+    if n == 0: # * Base Case
 
         return
     
@@ -726,3 +726,52 @@ def pattern(n):
     pattern(n-1)
 
 pattern(5)
+
+# * Using Recursive function to add two no.
+
+def add(x,y):
+
+    if y == 0: # * Base Case
+
+        return x
+
+    return add(x,y-1) + 1
+
+# * Using Recursive function to subtract two no.
+
+def sub(x,y):
+
+    if y == 0: # * Base Case
+
+        return x
+
+    return sub(x - 1,y - 1)
+
+# * Using Recursive function to multiply two no.
+
+def mul(x,y):
+
+    if x < y:
+
+        return mul(y,x)
+
+    elif y != 0:
+
+        return x + mul(x, y - 1)
+
+    else: # * Base Case
+
+        return 0
+
+# * Using Recursive function to divide two no.
+
+
+def div(x,y):
+
+    if x < y: # * Base Case
+
+        return 0
+
+    else:
+
+        return 1 + div(x-y, y)
