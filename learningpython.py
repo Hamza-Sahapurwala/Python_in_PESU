@@ -608,7 +608,7 @@ def f1(a,b,*ar):
 f1(12,22,2,6)
 
 # * * and ** make is easier to take tuple and dictionary input
-'''
+
 # ! Recursion
 
 # * Calling a function while the function itself is running
@@ -627,7 +627,7 @@ f1(12,22,2,6)
 
 # * Depth: No. of steps to complete a problem
 
-'''
+''''''
 Advantages:
 
 1. Used to simplify complex problems into smaller easier problems
@@ -637,7 +637,7 @@ Advantages:
 3. Handling unknown levels of depth
 
 4. Mathematical & Algorithmic
-'''
+''''''
 
 def factorial(n):
 
@@ -821,3 +821,69 @@ def d(x, y):
 c = [a, d] # * a and d are the function names
 
 fun(c, 10, 5)
+'''
+# ! Closures in Python
+
+# * Nested Function which can access the variables of it's outer function
+
+# * Two examples which are similar are below:
+
+def out():
+
+    a = 1
+
+    def inn():
+
+        print(a)
+
+    print('inn:',inn)
+
+    return inn # *Returns function object of inn (Basically using callback)
+    
+d = out() # * d is now the function of inn
+
+print('d:',d)
+
+# * d and inn objects are the same proving that they are the same function
+
+d()
+
+def f1(): # * outer function
+
+    a = 'Hello'
+
+    def f2(): # * inner function
+
+        print(a)
+
+    print('f2:',f2)
+
+    return f2
+
+c = f1()
+
+print('c:',c)
+
+# * c and f2 have the same function object
+
+c()
+
+# * Example with changing local variables
+
+def division(y): # * Outer function
+
+    def div(x): # * Inner function
+
+        print(x // y)
+
+    return div
+
+d1 = division(2) # * For d1, y will be 2
+
+d2 = division(3) # * For d2, y will be 3
+
+d1(20) # * This will be 20 // 2
+
+d2(96) # * This will be 96 // 3
+
+print('d1:',d1,'\nd2:',d2) # * d1 and d2 are different as the outer function parameters are different
