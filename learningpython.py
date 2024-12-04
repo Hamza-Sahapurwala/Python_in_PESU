@@ -821,7 +821,7 @@ def d(x, y):
 c = [a, d] # * a and d are the function names
 
 fun(c, 10, 5)
-'''
+
 # ! Closures in Python
 
 # * Nested Function which can access the variables of it's outer function
@@ -979,3 +979,39 @@ def compute(): # * Outer
 odd = compute()
 
 print(odd())
+'''
+# ! Closures Pt.3
+
+def f1(): # * Outer
+
+    def f2():
+
+        print('Hello')
+
+    return f2
+
+a = f1()
+
+del f1
+
+a() # * Even after f1 is deleted, f2 still runs
+
+def a1(x):
+
+    def b1():
+
+        print('Hello')
+
+        print(x)
+
+    return b1
+
+a = a1(3)
+
+del a1
+
+a()
+
+# * The function still works even after a1 is deleted
+
+# * That means b1 stores the instance where a1 had the assigned value
