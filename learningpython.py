@@ -979,7 +979,7 @@ def compute(): # * Outer
 odd = compute()
 
 print(odd())
-'''
+
 # ! Closures Pt.3
 
 def f1(): # * Outer
@@ -1059,11 +1059,11 @@ def func_decorator(func):
 
         print('Before func_hello is called:')
 
-        func()
+        func() # * func_hello
 
         print('After func_hello')
 
-    return inner_func
+    return inner_func # *Callback
 
 @func_decorator # * This needs a function defined below it and the caller of that function
 
@@ -1114,3 +1114,81 @@ fac(15)
 maxi(1,2,3)
 
 mini(1,2,3,4)
+'''
+# * Decorators Pt.2
+
+def compute(f):
+
+    def inner(a, b):
+
+        print('Calculating Hypotenuse:')
+
+        f(a,b)
+
+        print('Done')
+
+    return inner
+
+@compute
+
+def h(a, b):
+
+    print((a ** 2 + b ** 2) ** 0.5)
+
+h(5,12)
+
+# * Chained Decorators
+
+def dec_x(f):
+
+    def inne():
+
+        print('*' * 20)
+
+        f()
+
+        print('*' * 20)
+
+    return inne
+
+def dec_y(f):
+
+    def inner():
+
+        print('#' * 20)
+
+        f()
+
+        print('#' * 20)
+
+    return inner
+
+def h():
+
+    print('Hello') 
+
+a = dec_y(dec_x(h))
+
+a()
+
+# * Line 1170 will execute dec_y thing first and the dec_x to give us this pattern:
+
+'''
+####################
+********************
+Hello
+********************
+####################
+'''
+
+# * We can get the same thing by using @ symbol
+
+@dec_y
+
+@dec_x
+
+def ar():
+
+    print('Hello')
+
+ar()
