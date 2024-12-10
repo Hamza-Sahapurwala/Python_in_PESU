@@ -1114,7 +1114,7 @@ fac(15)
 maxi(1,2,3)
 
 mini(1,2,3,4)
-'''
+
 # * Decorators Pt.2
 
 def compute(f):
@@ -1171,15 +1171,13 @@ a = dec_y(dec_x(h))
 
 a()
 
-# * Line 1170 will execute dec_y thing first and the dec_x to give us this pattern:
+# * Line 1170 will execute dec_y thing first and the dec_x to give us this pattern (ignore # * at start):
 
-'''
-####################
-********************
-Hello
-********************
-####################
-'''
+# * ####################
+# * ********************
+# * Hello
+# * ********************
+# * ####################
 
 # * We can get the same thing by using @ symbol
 
@@ -1192,3 +1190,32 @@ def ar():
     print('Hello')
 
 ar()
+'''
+
+# ! Generators
+
+# * Functions that behave like iterators (like range())
+
+# * They store elements which we can loop over to get
+
+# * We use 'yield' keyword to make any function like a generator
+
+def gen():
+
+    yield 1
+
+    yield 2
+
+    yield 3
+
+print(gen()) # * This tells us the generator object's memory address
+
+# * It doesn't return any thing else
+
+for i in gen():
+
+    print(i) # * This gives us the 1 2 3 result
+
+print(type(gen())) # * <class 'generator'>
+
+print(gen()[1]) # * TypeError: 'generator' object is not subsicriptable i.e. you can't find any particular element
