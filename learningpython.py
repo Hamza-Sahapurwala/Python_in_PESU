@@ -1218,4 +1218,46 @@ for i in gen():
 
 print(type(gen())) # * <class 'generator'>
 
-print(gen()[1]) # * TypeError: 'generator' object is not subsicriptable i.e. you can't find any particular element
+# print(gen()[1]) # * TypeError: 'generator' object is not subsicriptable i.e. you can't find any particular element
+
+# ! Generators Pt.2
+
+# * next() function is used to for going to the next element in the iterator
+
+def gen_fun():
+
+    yield 10
+
+    yield 20
+     
+    yield 30
+
+o = gen_fun() # * Like how we can do a = range(5), this stores all the elements from 0 to 4 in an object which is variable a
+
+print(next(o))
+
+print(next(o))
+
+print(next(o))
+
+# print(next(o)) # * Gives an error as generator is out of objects to iterate
+
+# * Fibonnaci in Generator
+
+def fib(n):
+
+    x, y = 0, 1
+
+    for i in range(n):
+
+        x, y = y, y + x
+
+        yield x
+
+def sqq(a): # * Generator
+
+    for i in a:
+
+        yield i ** 2
+
+print(sum(sqq(fib(3)))) # * prints 6
