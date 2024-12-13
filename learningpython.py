@@ -3,7 +3,11 @@
 
 import csv
 
-'''print('Hello World!!')
+from tkinter import *
+
+from tkinter import messagebox
+'''
+print('Hello World!!')
 
 # This is test try for python
 
@@ -1190,7 +1194,7 @@ def ar():
     print('Hello')
 
 ar()
-'''
+
 
 # ! Generators
 
@@ -1261,3 +1265,79 @@ def sqq(a): # * Generator
         yield i ** 2
 
 print(sum(sqq(fib(3)))) # * prints 6
+'''
+# ! Tkinter
+
+# * Tkinter is one of the GUI libraries in Python
+
+# * As we have imported tkinter to variable t (Refer Line 6), let's not mess around by creating any new variable named t
+
+# * If we use 'import tkinter as t' then above comment is in matter
+
+# * But here we are just importing everything from tkinter to access all the widgets
+
+# * So, no need to write root = t.Tk()
+
+def click():
+
+    # * For messagebox, we again have to import it separately cause it's Python :)
+
+    messagebox.showinfo('Message', 'Button clicked') # * New window which will print the message i.e. Button clicked
+
+root = Tk() # * This is what creates the window
+
+root.title('New BOI') # * The Name of the window
+
+root.geometry('500x500') # * The Dimensions of the window (breath x length)
+
+root.config(bg = 'white')
+
+# ! Button in Tkinter
+
+# * This creates the button widget
+
+button = Button(root, text = 'Submit', command=click, pady=5, activebackground='orange',bg='white') 
+
+# * command takes in func. name which will be called when the button is clicked
+
+# * pady creates some space b/w text inside the button and the button
+
+# * activebg changes the colour of the button in the duration it is clicked
+
+# * bg is the const. colour of button
+
+# ! Canvas in Tkinter
+
+# * This creates the canvas window
+
+# * Canvas is just the Drawing area in the window
+
+canvas = Canvas(root, bg = 'white', height=300, width=300)
+
+# * We are creating the circle in the window
+
+coord = (10, 10, 300, 300)
+
+arc1 = canvas.create_arc(coord, start=0,extent=150, fill='red')
+
+arc2 = canvas.create_arc(coord, start=150,extent=215, fill='green')
+
+# * We are adding an image to the window
+
+canvas1 = Canvas(root, height=700,width=800)
+
+filename = PhotoImage(file=r'C:\Users\Admin\Pictures\ip.png')
+
+image = canvas1.create_image(20, 20, anchor=NW, image= filename)
+
+button.pack(side=BOTTOM) # * This places the button on the window
+
+canvas.pack()
+
+canvas1.pack()
+
+# * pack(side=TOP) puts the widget on top of the window (default)
+
+# * pack(side=BOTTOM) puts the widget on the bottom of the window 
+
+root.mainloop() # * This keeps the window alive until we close it (this is always at end of the code)
