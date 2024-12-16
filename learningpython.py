@@ -1297,6 +1297,10 @@ def click():
 
     messagebox.showinfo('Message', 'Button clicked') # * New window which will print the message i.e. Button clicked
 
+def submittion():
+
+    messagebox.askquestion('Form', 'Do you want to end this life?')
+
 root = Tk() # * This is what creates the window
 
 root.title('New BOI') # * The Name of the window
@@ -1365,6 +1369,20 @@ cb2 = Checkbutton(root, text='Reading', variable = checkbutton2, onvalue = 1, of
 
 cb3 = Checkbutton(root, text='Horse Riding', variable = checkbutton3, onvalue = 1, offvalue=0)
 
+# ! Label in Tkinter
+
+# * Label is used to print any text on the tkinter window
+
+username = Label(root, text = 'Username')
+
+password = Label(root, text = 'Password')
+
+submitbutton = Button(root, text = 'Submit', command=submittion)
+
+e1 = Entry(root, width = 20)
+
+e2 = Entry(root, width = 20)
+
 # ! Packing
 
 button.pack(side=BOTTOM) # * This places the button on the window
@@ -1382,6 +1400,16 @@ cb1.pack()
 cb2.pack()
 
 cb3.pack()
+
+username.place(x = 30, y = 50)
+
+password.place(x = 30, y= 90)
+
+submitbutton.place(x = 30, y = 120)
+
+e1.place(x = 100, y = 50)
+
+e2.place(x = 100, y = 90)
 
 # * pack(side=TOP) puts the widget on top of the window (default)
 
