@@ -1194,8 +1194,7 @@ def ar():
     print('Hello')
 
 ar()
-
-
+'''
 # ! Generators
 
 # * Functions that behave like iterators (like range())
@@ -1265,7 +1264,21 @@ def sqq(a): # * Generator
         yield i ** 2
 
 print(sum(sqq(fib(3)))) # * prints 6
-'''
+
+# * Generator Expressions
+
+# * We can basically use list(or tuple comprehensions) to do the same thing like an generator
+
+gen_exp = (i ** 2 for i in range(5) if i % 2 == 0)
+
+print(gen_exp) # * This prints the gen_exp object thingy
+
+# * If the brackets were changed to [] in line 1272, then it would print a list
+
+for i in gen_exp:
+
+    print(i) # * This prints the individual elements of the generator
+
 # ! Tkinter
 
 # * Tkinter is one of the GUI libraries in Python
