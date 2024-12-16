@@ -1194,7 +1194,7 @@ def ar():
     print('Hello')
 
 ar()
-'''
+
 # ! Generators
 
 # * Functions that behave like iterators (like range())
@@ -1278,7 +1278,7 @@ print(gen_exp) # * This prints the gen_exp object thingy
 for i in gen_exp:
 
     print(i) # * This prints the individual elements of the generator
-
+'''
 # ! Tkinter
 
 # * Tkinter is one of the GUI libraries in Python
@@ -1343,11 +1343,45 @@ filename = PhotoImage(file=r'C:\Users\Admin\Pictures\ip.png')
 
 image = canvas1.create_image(20, 20, anchor=NW, image= filename)
 
+# ! Checkbutton in Tkinter
+
+# * User can enter more than one option
+
+checkbutton = Checkbutton(root, command=click)
+
+labellllll = Label(root, text = 'Select your hobbies')
+
+checkbutton1 = IntVar() # * IntVar is something that holds integer data passed to the checkbutton widget
+
+checkbutton2 = IntVar() # * IntVar is something that holds integer data passed to the checkbutton widget
+
+checkbutton3 = IntVar() # * IntVar is something that holds integer data passed to the checkbutton widget
+
+# * IntVar is used to store, retrieve and manage integer variables in Python 
+
+cb1 = Checkbutton(root, text='Painting', variable = checkbutton1, onvalue = 1, offvalue=0)
+
+cb2 = Checkbutton(root, text='Reading', variable = checkbutton2, onvalue = 1, offvalue=0)
+
+cb3 = Checkbutton(root, text='Horse Riding', variable = checkbutton3, onvalue = 1, offvalue=0)
+
+# ! Packing
+
 button.pack(side=BOTTOM) # * This places the button on the window
 
-canvas.pack()
+# canvas.pack()
 
-canvas1.pack()
+# canvas1.pack()
+
+checkbutton.pack(side=BOTTOM)
+
+labellllll.pack()
+
+cb1.pack()
+
+cb2.pack()
+
+cb3.pack()
 
 # * pack(side=TOP) puts the widget on top of the window (default)
 
