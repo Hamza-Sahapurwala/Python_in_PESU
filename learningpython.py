@@ -1383,6 +1383,22 @@ e1 = Entry(root, width = 20)
 
 e2 = Entry(root, width = 20)
 
+# ! Frame in Tkinter
+
+# * Frame is used to make a region inside the window itself
+
+# * And that becomes another window by itself
+
+# * A window inside a window
+
+# * And that helps us arrange stuff in a more better manner
+
+frame = Frame(root)
+
+frame.pack(side=BOTTOM)
+
+bb = Button(frame, text='Yes')
+
 # ! Packing
 
 button.pack(side=BOTTOM) # * This places the button on the window
@@ -1410,6 +1426,8 @@ submitbutton.place(x = 30, y = 120)
 e1.place(x = 100, y = 50)
 
 e2.place(x = 100, y = 90)
+
+bb.pack() # * This will be placed at the bottom of the window as the frame it is related to is packed at the bottom
 
 # * pack(side=TOP) puts the widget on top of the window (default)
 
