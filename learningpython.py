@@ -1393,11 +1393,21 @@ e2 = Entry(root, width = 20)
 
 # * And that helps us arrange stuff in a more better manner
 
+# * And we can put as many widgets as we want in the frame
+
 frame = Frame(root)
 
 frame.pack(side=BOTTOM)
 
 bb = Button(frame, text='Yes')
+
+# ! Nested Frames
+
+# * As the name suggests, It's a frame inside a frame
+
+frame1 = Frame(root, bg='black',width=500,height=300)
+
+frame2 = Frame(root, bg='Grey',width=100,height=100)
 
 # ! Packing
 
@@ -1428,6 +1438,10 @@ e1.place(x = 100, y = 50)
 e2.place(x = 100, y = 90)
 
 bb.pack() # * This will be placed at the bottom of the window as the frame it is related to is packed at the bottom
+
+frame1.pack()
+
+frame2.pack(pady=20,padx=20)
 
 # * pack(side=TOP) puts the widget on top of the window (default)
 
