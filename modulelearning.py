@@ -70,3 +70,11 @@ help(adddddd) # * This by itself prints the triple quoted comment with more thin
 # * If modules are imported, __name__ = name of the file
 
 print(__name__) # * Prints __main__
+
+# ! Pytest
+
+def testsqrt():
+
+    assert (25 ** 0.5) == 5 # * Tells pytest to look at this statement speifically
+
+    print((25 ** 0.50) == 8)
