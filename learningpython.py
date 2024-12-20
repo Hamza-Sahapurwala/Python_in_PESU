@@ -6,7 +6,7 @@ import csv
 from tkinter import *
 
 from tkinter import messagebox
-'''
+
 print('Hello World!!')
 
 # This is test try for python
@@ -631,17 +631,15 @@ f1(12,22,2,6)
 
 # * Depth: No. of steps to complete a problem
 
-''''''
-Advantages:
+# Advantages:
 
-1. Used to simplify complex problems into smaller easier problems
+# 1. Used to simplify complex problems into smaller easier problems
 
-2. Solving problems with repeated patterns
+# 2. Solving problems with repeated patterns
 
-3. Handling unknown levels of depth
+# 3. Handling unknown levels of depth
 
-4. Mathematical & Algorithmic
-''''''
+# 4. Mathematical & Algorithmic
 
 def factorial(n):
 
@@ -1278,7 +1276,7 @@ print(gen_exp) # * This prints the gen_exp object thingy
 for i in gen_exp:
 
     print(i) # * This prints the individual elements of the generator
-'''
+
 # ! Tkinter
 
 # * Tkinter is one of the GUI libraries in Python
@@ -1448,3 +1446,19 @@ frame2.pack(pady=20,padx=20)
 # * pack(side=BOTTOM) puts the widget on the bottom of the window 
 
 root.mainloop() # * This keeps the window alive until we close it (this is always at end of the code)
+
+# ! Module Creation
+
+# * We can create our own modules and import them here
+
+# import trialmodule
+
+# # * The python file which contains code is being imported
+
+# trialmodule.f1()
+
+# trialmodule.f2()
+
+# trialmodule.f3()
+
+# print('This is the value of variable a in trialmodule:',trialmodule.a, 'And we can actually change it\'s like so:',trialmodule.a + 2)
