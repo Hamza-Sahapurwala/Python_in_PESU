@@ -1,109 +1,133 @@
 
 # ! This is a Continuation of file learningpython.py
 
-import trialmodule as t # * When this is called, the print statement is also called
+# import trialmodule as t # * When this is called, the print statement is also called
 
-# * We renamed trialmodule as t
+# # * We renamed trialmodule as t
 
-t.f1()
+# t.f1()
 
-t.f2()
+# t.f2()
 
-t.f3()
+# t.f3()
 
-# t.a = t.a + 2 # * We can access the variables from trialmodule file
+# # t.a = t.a + 2 # * We can access the variables from trialmodule file
 
-# print(t.a)
+# # print(t.a)
 
-# * Or we can do specifically call functions using from keyword
+# # * Or we can do specifically call functions using from keyword
 
-from trialmodule import f1, f2
+# from trialmodule import f1, f2
 
-# * The print statement is not called
+# # * The print statement is not called
 
-f1()
+# f1()
 
-f2()
+# f2()
 
-from trialmodule import *
+# from trialmodule import *
 
-# * The print statement is not called
+# # * The print statement is not called
 
-f1()
+# f1()
 
-f2()
+# f2()
 
-f3()
+# f3()
 
-a += 1 # * As the variable is present in the trialmodule file, now error is raised
+# a += 1 # * As the variable is present in the trialmodule file, now error is raised
 
-# * When we comment the code of t.a above
+# # * When we comment the code of t.a above
 
-print(a)
+# print(a)
 
-# ! __doc__ variable and help()
+# # ! __doc__ variable and help()
 
-# * In Python, each object can be documented using Docstrings
+# # * In Python, each object can be documented using Docstrings
 
-# * e.g.
+# # * e.g.
 
-def adddddd():
+# def adddddd():
 
-    '''Performing Addition of two numbers'''
+#     '''Performing Addition of two numbers'''
     
-    print(a + 7)
+#     print(a + 7)
 
-print('Using __doc__, we get:')
+# print('Using __doc__, we get:')
 
-print(adddddd.__doc__) # * Prints the triple quoted comments in the function
+# print(adddddd.__doc__) # * Prints the triple quoted comments in the function
 
 # ! The triple quotes should always be on top
 
-print('Using help(), we get:')
+# print('Using help(), we get:')
 
-help(adddddd) # * This by itself prints the triple quoted comment with more things which tells where the function is present
+# help(adddddd) # * This by itself prints the triple quoted comment with more things which tells where the function is present
 
-# ! __name__
+# # ! __name__
 
 # * If no modules is imported, __name__ = __main__
 
 # * If modules are imported, __name__ = name of the file
 
-print(__name__) # * Prints __main__
+# print(__name__) # * Prints __main__
 
 # ! Pytest
 
-def testsqrt():
+# def testsqrt():
 
-    assert (25 ** 0.5) == 5 # * Tells pytest to look at this statement speifically
+#     assert (25 ** 0.5) == 5 # * Tells pytest to look at this statement speifically
 
-    print((25 ** 0.50) == 8)
+#     print((25 ** 0.50) == 8)
 
 # ! Doctest
 
 # * We can give testcases in the docstring(triple quotes) and use doctest module to check if a function works or not
 
-import doctest
+# import doctest
 
-def facto(n):
+# def facto(n):
 
-    '''
-    >>> facto(5)
-    120
-    >>> facto(0)
-    1
-    '''
+#     '''
+#     >>> facto(5)
+#     120
+#     >>> facto(0)
+#     1
+#     '''
 
-    if n == 0:
+#     if n == 0:
 
-        n = 1
+#         n = 1
 
-    else:
+#     else:
 
-        n = n * facto(n - 1)
+#         n = n * facto(n - 1)
 
-    return n
+#     return n
 
-doctest.testmod(name='testing', verbose=True)
+# doctest.testmod(name='facto', verbose=True)
 
 # * Verbose=True prints something even if all tests have passed
+
+# ! Lambda Functions
+
+# * Basically, One-Liners but for functions
+
+# * lambda multiple arguments seperated by comma : expression which leads to output
+
+square = lambda x: x * x
+
+print(square(4), square,type(square)) # * Prints 16 lambda smt <class 'function'>
+
+maxi = lambda a,b: a if a > b else b
+
+print('The max is',maxi(3,2))
+
+# * Lambda can also be used as an inner function
+
+def funky(n):
+
+    return lambda a: a * n # * The innerf function
+
+innerboi = funky(4) # * Very similar to callback functions
+
+print(innerboi(3))
