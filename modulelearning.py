@@ -446,3 +446,19 @@ print(trig.info())
 rec = Quadrilateral('Rectangle')
 
 print(rec.info())
+
+# ! issubclass Function
+
+# * Syntax: a = issubclass(childclassname, parentclassname) 
+
+# * This gives True if child class is actually a child of Parent Class else False
+
+print(issubclass(Triangle, Shape)) # * True
+
+# ! isinstance Function
+
+# * Syntax: a = isinstance(object, classname)
+
+# * This gives True if a variable is an object of a class else False
+
+print(isinstance(trig, Triangle)) # * True
