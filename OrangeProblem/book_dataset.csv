@@ -1,0 +1,78 @@
+Title,Author,Release Year,Rating,Action,Comedy,Drama,Sci-Fi,Animation,Romance
+Don Quixote,Miguel de Cervantes,1999,8.9,0,0,0,0,0,1
+Alice's Adventures in Wonderland,Lewis Carroll,2002,6,1,0,0,1,1,0
+The Adventures of Huckleberry Finn,Mark Twain,2005,5.5,1,0,0,0,0,0
+The Adventures of Tom Sawyer,Mark Twain,1996,6.1,0,1,0,1,0,1
+Treasure Island,Robert Louis Stevenson,2022,6.6,1,0,0,0,0,0
+Pride and Prejudice,Jane Austen,2012,8.5,0,0,0,1,0,0
+Wuthering Heights,Emily Brontë,1988,4.7,1,0,0,0,1,1
+Jane Eyre,Charlotte Brontë,2000,2.3,1,0,0,0,1,1
+Moby Dick,Herman Melville,1999,6.5,1,1,0,0,0,1
+The Scarlet Letter,Nathaniel Hawthorne,2013,5.6,0,1,1,1,0,0
+Gulliver's Travels,Jonathan Swift,2006,1.1,1,0,0,1,0,1
+The Pilgrim's Progress,John Bunyan,2018,4.3,0,0,1,0,1,1
+A Christmas Carol,Charles Dickens,1982,5,0,0,0,0,0,1
+David Copperfield,Charles Dickens,1983,1.1,0,0,1,1,0,0
+A Tale of Two Cities,Charles Dickens,2004,4,0,1,0,1,0,0
+Little Women,Louisa May Alcott,2005,2.8,0,0,0,1,0,0
+Great Expectations,Charles Dickens,2007,6,0,0,1,1,0,0
+"The Hobbit, or, There and Back Again",J.R.R. Tolkien,2014,4.9,0,1,1,1,0,0
+"Frankenstein, or, the Modern Prometheus",Mary Shelley,1983,1,1,0,0,1,0,1
+Oliver Twist,Charles Dickens,1989,6.8,1,1,0,0,0,0
+Uncle Tom's Cabin,Harriet Beecher Stowe,1986,9.7,1,0,0,1,0,1
+Crime and Punishment,Fyodor Dostoyevsky,2016,6.2,1,1,1,0,0,0
+Madame Bovary: Patterns of Provincial life,Gustave Flaubert,2015,5.3,1,0,0,0,0,0
+The Return of the King,J.R.R. Tolkien,1989,6.1,0,0,0,1,0,1
+Dracula,Bram Stoker,1998,7.2,0,1,1,0,1,0
+The Three Musketeers,Alexandre Dumas,2016,2.8,0,1,1,0,0,0
+Brave New World,Aldous Huxley,1997,4.5,0,0,1,1,1,0
+War and Peace,Leo Tolstoy,2004,3.6,1,0,0,0,0,0
+To Kill a Mockingbird,Harper Lee,1980,1.7,1,0,0,0,0,0
+The Wizard of Oz,L. Frank Baum,2014,6,0,0,1,1,0,1
+Animal Farm,Victor Hugo,2014,3,0,0,0,0,1,1
+The Great Gatsby,Frances Hodgson Burnett,1992,6.2,1,1,0,0,1,0
+The Little Prince,George Orwell,1981,8.4,1,0,0,0,0,1
+The Call of the Wild,F. Scott Fitzgerald,1995,1.8,0,0,0,1,1,0
+"20,000 Leagues Under the Sea",Antoine de Saint-Exupéry,1993,6.3,0,1,1,0,0,0
+Anna Karenina,Jack London,1995,8.8,0,0,1,0,1,0
+The Wind in the Willows,Jules Verne,2020,2.7,0,1,0,0,1,1
+The Picture of Dorian Gray,Leo Tolstoy,2017,1.6,0,0,0,1,0,1
+The Grapes of Wrath,Kenneth Grahame,2022,7.6,0,0,1,1,0,1
+Sense and Sensibility,Oscar Wilde,1996,6,0,1,0,0,1,1
+The Last of the Mohicans,John Steinbeck,1990,4.4,1,0,0,0,0,0
+Tess of the d'Urbervilles,Jane Austen,2008,8.9,0,1,0,0,1,0
+Harry Potter and the Sorcerer's Stone,James Fenimore Cooper,1985,4.3,0,0,1,0,1,1
+Heidi,Thomas Hardy,2021,2.8,1,1,0,0,0,1
+Ulysses,J.K. Rowling,1989,7.2,1,0,0,0,0,0
+The Complete Sherlock Holmes,Johanna Spyri,2016,8.7,0,1,0,0,0,0
+The Count of Monte Cristo,James Joyce,1986,8.9,1,0,0,1,0,1
+The Old Man and the Sea,Arthur Conan Doyle,2015,7.6,0,1,0,0,1,1
+"The Lion, the Witch, and the Wardrobe",Alexandre Dumas,1992,9.6,1,0,1,1,0,0
+The Hunchback of Notre Dame,Ernest Hemingway,2001,8,1,0,0,0,0,0
+Pinocchio,C.S. Lewis,2015,8.7,0,0,0,1,1,0
+One Hundred Years of Solitude,Victor Hugo,2020,8.5,0,0,0,0,1,0
+Ivanhoe,Carlo Collodi,1989,5.2,1,0,0,1,1,0
+The Red Badge of Courage,Gabriel García Márquez,2019,6.3,0,1,0,0,0,0
+Anne of Green Gables,Walter Scott,2003,9.1,1,1,0,1,0,0
+Black Beauty,Anna Sewell,1981,3.1,0,1,1,1,0,0
+Peter Pan,J.M. Barrie,2001,4.2,0,0,1,0,1,0
+A Farewell to Arms,Ernest Hemingway,2005,7.1,0,1,1,1,0,0
+The House of the Seven Gables,Nathaniel Hawthorne,2017,2,0,1,1,0,0,1
+Lord of the Flies,William Golding,1990,9.1,0,1,0,1,0,1
+The Prince and the Pauper,Mark Twain,2014,7.9,0,1,0,1,0,1
+A Portrait of the Artist as a Young Man,James Joyce,1994,2.8,1,0,0,0,1,0
+Lord Jim,Joseph Conrad,2010,9.3,1,0,1,0,1,0
+Nineteen Eighty-Four,J.K. Rowling,1995,9.4,1,0,1,0,0,1
+The Jungle,Stendhal,2014,4.5,0,0,0,0,1,0
+The Da Vinci Code,Albert Camus,2018,4.6,0,0,1,0,0,1
+Persuasion,Franz Kafka,2007,5.6,0,0,1,0,0,0
+Mansfield Park,D.H. Lawrence,1991,1.8,0,1,0,0,0,1
+Candide,Robert Louis Stevenson,2008,3.4,0,0,0,1,1,1
+For Whom the Bell Tolls,J.D. Salinger,1984,9.7,1,0,0,1,0,0
+Far from the Madding Crowd,Ray Bradbury,1982,8,0,0,1,0,1,0
+The Fellowship of the Ring,Jules Verne,2019,4.4,0,0,0,1,0,1
+The Return of the Native,William Makepeace Thackeray,1995,9.7,0,0,0,1,0,1
+Sons and Lovers,Erich Maria Remarque,2013,3.8,0,0,0,0,1,0
+Charlotte's Web,Margaret Mitchell,1990,9.9,0,0,1,0,0,0
+The Swiss Family Robinson,Willa Cather,1981,6.2,1,0,0,1,0,1
+Bleak House,John Steinbeck,1995,7.3,0,0,0,0,1,0
