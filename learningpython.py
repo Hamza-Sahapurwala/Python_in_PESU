@@ -1451,14 +1451,14 @@ root.mainloop() # * This keeps the window alive until we close it (this is alway
 
 # * We can create our own modules and import them here
 
-# import trialmodule
+import trialmodule
 
-# # * The python file which contains code is being imported
+# * The python file which contains code is being imported
 
-# trialmodule.f1()
+trialmodule.f1()
 
-# trialmodule.f2()
+trialmodule.f2()
 
-# trialmodule.f3()
+trialmodule.f3()
 
-# print('This is the value of variable a in trialmodule:',trialmodule.a, 'And we can actually change it\'s like so:',trialmodule.a + 2)
+print('This is the value of variable a in trialmodule:',trialmodule.a, 'And we can actually change it\'s like so:',trialmodule.a + 2)
