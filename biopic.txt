@@ -1,2 +1,0 @@
-I am writing something new
-If I don't add \n this will be printed continueslyLike so
