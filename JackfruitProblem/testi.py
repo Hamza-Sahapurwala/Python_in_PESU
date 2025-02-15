@@ -67,7 +67,7 @@ class RestaurantBookingSystem:
     def load_restaurants(self):
         """Load restaurants from CSV file."""
         try:
-            with open('restaurants.csv', mode='r') as file:
+            with open(r'JackfruitProblem\restaurants.csv', mode='r') as file:
                 reader = csv.DictReader(file)
                 return [row for row in reader]
         except FileNotFoundError:
@@ -122,7 +122,7 @@ class RestaurantBookingSystem:
 
         restaurant = self.restaurants[selected_index[0]]
         try:
-            with open('bookings.csv', mode='a', newline='') as file:
+            with open(r'JackfruitProblem\bookings.csv', mode='a', newline='') as file:
                 writer = csv.writer(file)
                 writer.writerow([booking_id, restaurant['restaurant_id'], date, time, party_size])
             messagebox.showinfo("Success", f"Table booked successfully! Booking ID: {booking_id}")
@@ -132,7 +132,7 @@ class RestaurantBookingSystem:
     def view_bookings(self):
         """View current bookings."""
         try:
-            with open('bookings.csv', mode='r') as file:
+            with open(r'JackfruitProblem\bookings.csv', mode='r') as file:
                 reader = csv.reader(file)
                 bookings = list(reader)
             bookings_text = "\n".join([f"ID: {b[0]}, Restaurant: {b[1]}, Date: {b[2]}, Time: {b[3]}, Party: {b[4]}" for b in bookings])
@@ -147,11 +147,11 @@ class RestaurantBookingSystem:
             return
 
         try:
-            with open('restaurants.csv', mode='r') as file:
+            with open(r'JackfruitProblem\restaurants.csv', mode='r') as file:
                 bookings = list(csv.reader(file))
             updated_bookings = [b for b in bookings if b[0] != booking_id]
 
-            with open(r'D:\Hamza\Python\Hackathon_Question\Hackathon_Question\bookings.csv', mode='w', newline='') as file:
+            with open(r'JackfruitProblem\bookings.csv', mode='w', newline='') as file:
                 writer = csv.writer(file)
                 writer.writerows(updated_bookings)
 

@@ -7,7 +7,7 @@ from tkinter import messagebox
 def load_books(file_name):
     books=[]
     try:
-        with open(r"D:\Hamza\Python\OrangeProblem\book_dataset.csv",'r',newline='\r\n') as f:
+        with open(r"OrangeProblem\book_dataset.csv",'r',newline='\r\n') as f:
             reading = csv.DictReader(f)
             for row in reading:
                 # parse the row, converting numeric fields to proper ty

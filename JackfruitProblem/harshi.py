@@ -29,22 +29,8 @@ def Submit():
         root2.geometry("800x600")
         root2.resizable(True,True)
         
-        with open(r'D:\Hamza\Python\Hackathon_Question\Hackathon_Question\restaurants.csv')
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        with open(r'JackfruitProblem\restaurants.csv'):
+       
     else: 
         messagebox.showerror("Login Failed!","Try Again")
     

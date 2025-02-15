@@ -10,7 +10,7 @@ print('Hello!!! How are you?\nAre you a current user?')
 
 #     with open('users.csv','r',newline='\r\n') as f:
 
-with open(r'D:\Hamza\Python\Hackathon_Question\Hackathon_Question\restaurants.csv','r',newline='\r\n') as resti, open(r'D:\Hamza\Python\Hackathon_Question\Hackathon_Question\users.csv','+r',newline='\r\n') as usi, open(r'D:\Hamza\Python\Hackathon_Question\Hackathon_Question\bookings.csv', 'r', newline='\r\n') as bookie:
+with open(r'JackfruitProblem\restaurants.csv','r',newline='\r\n') as resti, open(r'JackfruitProblem\users.csv','+r',newline='\r\n') as usi, open(r'D:\Hamza\Python\Hackathon_Question\Hackathon_Question\bookings.csv', 'r', newline='\r\n') as bookie:
 
     restaurants = csv.reader(resti)
 
